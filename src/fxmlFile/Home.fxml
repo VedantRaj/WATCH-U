@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.LoginController">
+   <children>
+      <AnchorPane prefHeight="520.0" prefWidth="381.0" style="-fx-background-color: #FC4364;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="130.0" fitWidth="138.0" layoutX="121.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/camera.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="91.0" layoutY="315.0" prefHeight="26.0" prefWidth="225.0" text="Protect your property" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="351.0" prefHeight="16.0" prefWidth="271.0" text="Wirelessly view your video from anywhere " textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="367.0" text="in the world at anytime" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="453.0" layoutY="108.0" prefHeight="347.0" prefWidth="367.0" AnchorPane.leftAnchor="453.0" AnchorPane.rightAnchor="31.0">
+         <children>
+            <PasswordField layoutX="27.0" layoutY="182.0" prefHeight="40.0" prefWidth="264.0" promptText="password" style="-fx-background-color: -fx-control-inner-background;" />
+            <TextField layoutX="27.0" layoutY="106.0" prefHeight="40.0" prefWidth="264.0" promptText="abc@xyz.com" style="-fx-background-color: -fx-control-inner-background;" />
+            <Button fx:id="signIn" layoutX="74.0" layoutY="262.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="33.0" prefWidth="155.0" styleClass="sign_in" stylesheets="@../Style/custom.css" text="SIGN IN" textFill="WHITE">
+<!--               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>-->
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="90.0" layoutY="299.0" text="Can't login?">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="cantLogin" layoutX="161.0" layoutY="295.0" onMouseClicked="#handleButtonAction" text="Click Here" />
+            <Label layoutX="28.0" layoutY="165.0" text="Password">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="90.0" text="Email Address">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="58.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="448.0" AnchorPane.leftAnchor="394.0" AnchorPane.rightAnchor="303.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@../Images/min-cam.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="464.0" layoutY="35.0" text="WATCH U">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Hyperlink alignment="BOTTOM_LEFT" layoutX="730.0" layoutY="487.0" prefHeight="23.0" prefWidth="91.0" text="Visit Website" AnchorPane.bottomAnchor="10.0" />
+   </children>
+</AnchorPane>

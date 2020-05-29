@@ -17,7 +17,7 @@ public class LoginRoute extends Application{
     //Starting from the root of the application and overriding the start(). For viewing the architect, visit https://www.javatpoint.com/javafx-application-structure
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/FXML/Home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxmlFile/Home.fxml"));
         
         primaryStage.initStyle(StageStyle.DECORATED);
         primaryStage.setMaximized(false);
@@ -28,7 +28,7 @@ public class LoginRoute extends Application{
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("In the LoginRoute " + e.getMessage());
         }
     }
 

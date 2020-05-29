@@ -5,6 +5,8 @@ package Home;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import Home.Interfaces.isLoginable;
+import Home.Interfaces.ComponentsDisplayable;
 import Utils.DBConnector;
 import java.io.IOException;
 import java.net.URL;
@@ -22,7 +24,7 @@ import javafx.scene.paint.Color;
  *
  * @author Emperor
  */
-public class LoginController implements Initializable,ComponentsDisplayable,CanLogin {
+public class LoginController implements Initializable,ComponentsDisplayable,isLoginable {
 
     Connection conn;
     PreparedStatement preparedStatement;
@@ -49,7 +51,7 @@ public class LoginController implements Initializable,ComponentsDisplayable,CanL
     private void handleButtonAction(ActionEvent event){
         try {
             HandleFormEvents  events = new HandleFormEvents();
-            events.checkEventType(event, (CanLogin) events);
+            events.checkEventType(event, (isLoginable) events);
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
@@ -65,7 +67,7 @@ public class LoginController implements Initializable,ComponentsDisplayable,CanL
             setDisplayError(Color.RED, "Empty Credentials!");
         }
         else { 
-            String sql = "SELECT * FROM <TABLE_NAME> Where email = ? and password = ?";
+            String sql = "SELECT * FROM registered_user Where email = ? and password = ?";
             
             try {
                 preparedStatement = conn.prepareStatement(sql);
@@ -80,7 +82,7 @@ public class LoginController implements Initializable,ComponentsDisplayable,CanL
                     setDisplayError(Color.GREEN, "Successfull login... Redirecting...");
                 }                   
             } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
+                System.out.println("In the LoginController 1st try part " + ex.getMessage());
             } finally {
                 //closing the prepared statement to prevent the SQL injection
                 try {
