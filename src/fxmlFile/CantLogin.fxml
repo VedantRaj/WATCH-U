@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="310.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controllers.CantLoginController">
+   <children>
+      <Label layoutX="79.0" layoutY="132.0" prefHeight="34.0" prefWidth="98.0" text="Enter Mail Id">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="218.0" layoutY="132.0" prefHeight="34.0" prefWidth="293.0" promptText="abc@xyz.com" style="-fx-background-color: -fx-control-inner-background;" />
+      <Button layoutX="161.0" layoutY="218.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="223.0" style="-fx-background-radius: 0Px;" styleClass="sign_in" stylesheets="@../Style/custom.css" text="Send Mail">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="203.0" layoutY="30.0" text="RESET PASSWORD">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="54.0" fitWidth="51.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/min-cam.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="65.0" layoutY="33.0" text="WATCH U">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="196.0" layoutY="252.0" text="Didn't receive any mail">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>
